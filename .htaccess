@@ -1,0 +1,29 @@
+# Xserver（Apache）用の設定です。
+# 未確認：Xserver で .htaccess の各指令（mod_headers / mod_rewrite）が使えるかは、公開時に確認します。
+# 使えない指令があると 500 エラーになるため、<IfModule> で囲んでいます。
+
+Options -Indexes
+
+# HTTPS に統一（無料独自SSLの設定が済んでから有効にする）
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# セキュリティ用の応答ヘッダー（旧 _headers の内容）
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  # HTTPS に統一できてから有効にする（最初は短い期間で試す）
+  # Header always set Strict-Transport-Security "max-age=300"
+</IfModule>
+
+# 設定ファイル・見本・ドキュメントは外から見えないようにする
+<FilesMatch "^(send_config(\.sample)?\.php|README\.md|\.gitignore)$">
+  Require all denied
+</FilesMatch>

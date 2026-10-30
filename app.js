@@ -115,6 +115,7 @@
     });
   });
 
+  document.getElementById("f-t").value = String(Date.now());
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
     var nameEl = document.getElementById("f-name"), telEl = document.getElementById("f-tel"), agreeEl = document.getElementById("f-agree");
@@ -133,7 +134,22 @@
       (!okName ? nameEl : !okTel ? telEl : agreeEl).focus();
       return;
     }
-    msg.style.color = "#14284B";
-    msg.textContent = "入力内容に問題はありません。確認用のたたき台のため、まだ送信されません。公開時に送信先を設定します。";
+    var btn = e.target.querySelector("button[type=submit]");
+    var fd = new FormData(e.target);
+    fd.set("agree", "1");
+    btn.disabled = true;
+    msg.style.color = "#14284B"; msg.textContent = "送信しています…";
+    fetch("send.php", { method: "POST", body: fd, headers: { "X-Requested-With": "fetch" } })
+      .then(function (r) { return r.json().catch(function () { return { ok: false, message: "送信できませんでした。お手数ですが、お電話でご連絡ください。" }; }); })
+      .then(function (j) {
+        msg.style.color = j.ok ? "#14284B" : "";
+        msg.textContent = j.message;
+        if (j.ok) { e.target.reset(); document.getElementById("f-t").value = String(Date.now()); }
+        btn.disabled = false;
+      })
+      .catch(function () {
+        msg.style.color = ""; msg.textContent = "通信できませんでした。お手数ですが、お電話でご連絡ください。";
+        btn.disabled = false;
+      });
   });
 })();

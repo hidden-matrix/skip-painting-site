@@ -367,7 +367,9 @@
           <a class="big-tel" href="tel:0270000000" aria-label="電話番号 027-000-0000 に電話をかける">027-000-0000</a>
           <p class="lead">受付 9:00〜18:00（仮）。出られない時間は、フォームからご連絡ください。</p>
         </div>
-        <form id="form" novalidate aria-label="現地調査・無料見積のお申し込みフォーム">
+        <form id="form" action="send.php" method="post" novalidate aria-label="現地調査・無料見積のお申し込みフォーム">
+          <div class="hp" aria-hidden="true"><label>この欄は空のままにしてください<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <input type="hidden" name="t" id="f-t" value="">
           <label for="f-name">お名前（必須）<input id="f-name" name="name" autocomplete="name" required placeholder="例：前橋 太郎"></label>
           <label for="f-tel">お電話番号（必須）<input id="f-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required placeholder="例：090-0000-0000"></label>
           <label for="f-kind">気になる箇所
@@ -395,7 +397,8 @@
         <dt>取得する情報</dt><dd>フォームに入力された、お名前、お電話番号、気になる箇所、ご相談内容。お電話でのご相談の場合は、お聞きした内容。</dd>
         <dt>利用目的</dt><dd>ご相談への回答、現地調査・お見積り・工事に関するご連絡、工事後のご連絡のみに使います。</dd>
         <dt>第三者への提供</dt><dd>法令に基づく場合を除き、ご本人の同意なく、第三者へ提供しません。</dd>
-        <dt>外部サービス</dt><dd>フォームの受信に外部のサービスを使う場合は、サービス名をここに記載します（仮）。</dd>
+        <dt>送信の方法</dt><dd>フォームの内容は、このサイトを置いているサーバーから、お店のメールアドレスへ送られます。外部のフォームサービスは使いません。</dd>
+        <dt>迷惑送信の防止</dt><dd>機械による迷惑な送信を防ぐため、送信の回数を調べる目的で、接続元の情報を一時的に使います。この情報は、お問い合わせの対応には使いません。</dd>
         <dt>アクセス解析</dt><dd>このサイトは、アクセス解析のツールや広告のタグを使っていません。</dd>
         <dt>保管と削除</dt><dd>ご相談への対応が終わり、不要になった情報は削除します（保管期間は仮）。</dd>
         <dt>開示・訂正・削除</dt><dd>ご自身の情報の開示・訂正・削除は、<a href="tel:0270000000">027-000-0000</a>（受付 9:00〜18:00（仮））へご連絡ください。</dd>

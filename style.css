@@ -241,3 +241,5 @@ details.faq .ans { padding: 0 18px 18px; color: var(--fg-soft); }
   td.num { white-space: normal; font-size: 18px; }
   table.est caption { display: block; }
 }
+
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
