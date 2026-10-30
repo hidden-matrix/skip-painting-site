@@ -1,5 +1,6 @@
 <title>スキップ 前橋の塗装店</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Noto+Sans+JP:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
 <style>
 /* 配置: 1カラムの縦長LP。ヒーローのみ広い画面で左右2分割。刷毛線とジャンプ色(オレンジ)は主役の1点だけに使う */
@@ -144,6 +145,32 @@ footer .logo { width: 150px; color: #FFFFFF; }
 @media (max-width: 720px) { .sticky { display: flex; } }
 @media (min-width: 721px) { body { padding-bottom: 0; } }
 @media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s ease; } .btn:hover { transform: translateY(-1px); } }
+
+.ba { position: relative; aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); cursor: ew-resize; touch-action: pan-y; user-select: none; -webkit-user-select: none; --p: 62%; background: var(--ph-a); max-width: 100%; }
+.ba svg.scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.ba .after { clip-path: inset(0 calc(100% - var(--p)) 0 0); }
+.ba-handle { position: absolute; top: 0; bottom: 0; left: var(--p); width: 4px; margin-left: -2px; background: #FFFFFF; }
+.ba-knob { position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); border: 3px solid #FFFFFF; display: grid; place-items: center; font-weight: 700; font-size: 16px; letter-spacing: -2px; }
+.ba-tag { position: absolute; top: 10px; padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: #14284B; color: #FFFFFF; }
+.ba-tag.l { left: 10px; }
+.ba-tag.r { right: 10px; }
+.ba-cap { margin-top: 10px; font-size: 13px; color: var(--fg-soft); }
+.s-before { --sky: #D5D9E0; --ground: #A7AD9E; --wall: #CBC4B7; --roof: #7B6055; --door: #8B7A6A; --glass: #9FA8B3; --trim: #B5AE9F; --wear: 1; }
+.s-after { --sky: #CFE4F6; --ground: #8FB58F; --wall: #E6EDF6; --roof: #14284B; --door: #F28C28; --glass: #BBD8F0; --trim: #FFFFFF; --wear: 0; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes brush { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes swapin { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .hero .label, .hero h1, .hero p.sub, .hero .cta-row { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero h1 { animation-delay: .1s; }
+  .hero p.sub { animation-delay: .25s; }
+  .hero .cta-row { animation-delay: .4s; }
+  .hero h1 span::after { transform-origin: left center; animation: brush .8s .9s cubic-bezier(.3, .7, .2, 1) both; }
+  .sym-panel.swap { animation: swapin .35s ease both; }
+  .reveal { opacity: .35; transform: translateY(16px); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }
+  .reveal.in { opacity: 1; transform: none; }
+}
 </style>
 
 <div class="draft">確認用のたたき台です。電話番号・写真・料金・文面はすべて仮の内容です。</div>
@@ -167,7 +194,27 @@ footer .logo { width: 150px; color: #FFFFFF; }
           <a class="btn ghost" href="#contact">無料見積フォームへ<small>写真を送るだけでもOK</small></a>
         </div>
       </div>
-      <div class="ph" role="img" aria-label="施工写真の差し替え枠">メイン写真<br>（施工した家の写真に差し替え）</div>
+      <div>
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><symbol id="house" viewBox="0 0 400 300">
+          <rect width="400" height="300" style="fill:var(--sky)"/>
+          <rect y="250" width="400" height="50" style="fill:var(--ground)"/>
+          <rect x="90" y="130" width="220" height="125" style="fill:var(--wall)"/>
+          <polygon points="68,136 200,48 332,136" style="fill:var(--roof)"/>
+          <rect x="68" y="132" width="264" height="8" style="fill:var(--trim)"/>
+          <rect x="184" y="186" width="36" height="69" style="fill:var(--door)"/>
+          <circle cx="212" cy="222" r="2.5" fill="#FFFFFF"/>
+          <rect x="112" y="160" width="52" height="44" style="fill:var(--glass);stroke:var(--trim);stroke-width:4"/>
+          <rect x="238" y="160" width="52" height="44" style="fill:var(--glass);stroke:var(--trim);stroke-width:4"/>
+          <g style="opacity:var(--wear)"><ellipse cx="150" cy="238" rx="38" ry="12" fill="#8E877A" opacity=".35"/><ellipse cx="270" cy="150" rx="22" ry="30" fill="#8E877A" opacity=".25"/><path d="M150 100 L158 126 M200 90 L206 120 M244 104 L252 128" stroke="#9B5A3C" stroke-width="5" stroke-linecap="round" opacity=".7"/><path d="M126 135 L131 152 L124 166 M262 140 L256 158 L264 176 L258 190 M104 232 L120 224 L128 236" fill="none" stroke="#6F6A62" stroke-width="2" stroke-linecap="round"/></g>
+        </symbol></svg>
+        <div class="ba" id="ba" role="slider" tabindex="0" aria-label="塗る前と塗った後の比較" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
+          <svg class="scene s-before" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#house"/></svg>
+          <svg class="scene s-after after" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#house"/></svg>
+          <span class="ba-tag l">塗った後</span><span class="ba-tag r">塗る前</span>
+          <div class="ba-handle" aria-hidden="true"><div class="ba-knob">&lsaquo;&rsaquo;</div></div>
+        </div>
+        <p class="ba-cap">左右にドラッグして、塗る前と後を比べられます。イメージ図です。実際の施工写真に差し替えます。</p>
+      </div>
     </div>
   </section>
 
@@ -340,10 +387,70 @@ footer .logo { width: 150px; color: #FFFFFF; }
   var h = document.getElementById("sym-h"), p = document.getElementById("sym-p"), r = document.getElementById("sym-r");
   function show(i) {
     h.textContent = data[i].h; p.textContent = data[i].p; r.textContent = data[i].r;
+    var panel = document.getElementById("sym-panel");
+    panel.classList.remove("swap"); void panel.offsetWidth; panel.classList.add("swap");
     btns.forEach(function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
   }
   btns.forEach(function (b) { b.addEventListener("click", function () { show(Number(b.dataset.i)); }); });
   show(0);
+
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var ba = document.getElementById("ba");
+  var touched = false, raf = 0;
+  function setP(v) {
+    v = Math.max(0, Math.min(100, v));
+    ba.style.setProperty("--p", v + "%");
+    ba.setAttribute("aria-valuenow", String(Math.round(v)));
+  }
+  function fromEvent(e) {
+    var r = ba.getBoundingClientRect();
+    setP((e.clientX - r.left) / r.width * 100);
+  }
+  ba.addEventListener("pointerdown", function (e) {
+    touched = true; cancelAnimationFrame(raf);
+    try { ba.setPointerCapture(e.pointerId); } catch (x) {}
+    fromEvent(e);
+    ba.dataset.drag = "1";
+  });
+  ba.addEventListener("pointermove", function (e) { if (ba.dataset.drag === "1") fromEvent(e); });
+  function endDrag() { ba.dataset.drag = "0"; }
+  ba.addEventListener("pointerup", endDrag);
+  ba.addEventListener("pointercancel", endDrag);
+  ba.addEventListener("keydown", function (e) {
+    var cur = Number(ba.getAttribute("aria-valuenow"));
+    if (e.key === "ArrowLeft") { touched = true; setP(cur - 5); e.preventDefault(); }
+    if (e.key === "ArrowRight") { touched = true; setP(cur + 5); e.preventDefault(); }
+  });
+  if (!reduce) {
+    setP(0);
+    var t0 = 0, dur = 2800, to = 62;
+    setTimeout(function () {
+      function step(ts) {
+        if (touched) return;
+        if (!t0) t0 = ts;
+        var k = Math.min(1, (ts - t0) / dur);
+        var e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+        setP(to * e);
+        if (k < 1) raf = requestAnimationFrame(step);
+      }
+      raf = requestAnimationFrame(step);
+    }, 500);
+  }
+
+  if (!reduce && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("js");
+    var targets = document.querySelectorAll("section h2, .cards article, .flow li, .work-grid figure, .price-wrap, dl.co, .sym-grid, .owner .wrap > *, .contact-grid > *");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    targets.forEach(function (el) {
+      var idx = Array.prototype.indexOf.call(el.parentNode.children, el);
+      el.style.transitionDelay = (idx % 5) * 80 + "ms";
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+  }
 
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
