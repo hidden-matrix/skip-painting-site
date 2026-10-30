@@ -1,178 +1,25 @@
-<title>スキップ 前橋の塗装店</title>
-<meta name="claude:viewport-fit-sides" content="cover">
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>スキップ｜前橋市・群馬の塗装店（外壁・屋根・内装）</title>
+<meta name="description" content="前橋市を拠点に、群馬県内の外壁・屋根・内装の塗装を承る塗装店「スキップ」。現地調査とお見積りは無料。塗装の工程、塗料の種類、色選び、見積書の見方も解説します。">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#14284B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="スキップ">
+<meta property="og:title" content="スキップ｜前橋市・群馬の塗装店（外壁・屋根・内装）">
+<meta property="og:description" content="前橋市を拠点に、群馬県内の外壁・屋根・内装の塗装を承る塗装店「スキップ」。現地調査とお見積りは無料。塗装の工程、塗料の種類、色選び、見積書の見方も解説します。">
+<link rel="icon" href="logo/skip-logo-a-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Noto+Sans+JP:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
-<style>
-/* 配置: 1カラムの縦長LP。ヒーローのみ広い画面で左右2分割。刷毛線とジャンプ色(オレンジ)は主役の1点だけに使う */
-:root {
-  --bg: #F4F6F9;
-  --surface: #FFFFFF;
-  --fg: #14284B;
-  --fg-soft: #4A5875;
-  --line: #D9DFE8;
-  --accent: #F28C28;
-  --accent-ink: #14284B;
-  --band: #14284B;
-  --band-fg: #FFFFFF;
-  --ph-a: #E6EAF1;
-  --ph-b: #DDE3EC;
-  --font-display: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  --font-body: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
-  --font-label: "Barlow Condensed", "Arial Narrow", sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #0E1A2F; --surface: #152540; --fg: #E9EEF6; --fg-soft: #AEB9CC; --line: #2A3B58;
-    --accent: #F59A3C; --accent-ink: #0E1A2F; --band: #0A1424; --band-fg: #FFFFFF;
-    --ph-a: #1B2D4A; --ph-b: #213554; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #0E1A2F; --surface: #152540; --fg: #E9EEF6; --fg-soft: #AEB9CC; --line: #2A3B58;
-  --accent: #F59A3C; --accent-ink: #0E1A2F; --band: #0A1424; --band-fg: #FFFFFF;
-  --ph-a: #1B2D4A; --ph-b: #213554; color-scheme: dark;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 16px; line-height: 1.8; padding-bottom: 76px; }
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.35; margin: 0; text-wrap: balance; }
-p { margin: 0; }
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.logo { color: var(--fg); display: block; }
-.logo svg { display: block; width: 100%; height: auto; }
-
-.draft { background: var(--band); color: var(--band-fg); font-size: 12px; text-align: center; padding: 6px 16px; letter-spacing: .04em; }
-
-header.top { background: var(--surface); border-bottom: 1px solid var(--line); }
-header.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
-header.top .logo { width: 168px; }
-.tel-head { text-align: right; line-height: 1.3; }
-.tel-head small { display: block; font-size: 12px; color: var(--fg-soft); }
-.tel-head b { font-family: var(--font-label); font-size: 28px; letter-spacing: .04em; font-weight: 700; }
-@media (max-width: 560px) { .tel-head small { display: none; } .tel-head b { font-size: 22px; } header.top .logo { width: 132px; } }
-
-.label { font-family: var(--font-label); font-weight: 600; letter-spacing: .16em; font-size: 14px; color: var(--fg-soft); text-transform: uppercase; display: block; margin-bottom: 8px; }
-section { padding-block: 64px; }
-section h2 { font-size: clamp(24px, 4.6vw, 34px); font-weight: 900; }
-.lead { color: var(--fg-soft); margin-top: 12px; max-width: 60ch; }
-
-.hero { padding-block: 44px 56px; }
-.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
-.hero h1 { font-size: clamp(34px, 7.4vw, 58px); font-weight: 900; letter-spacing: .01em; }
-.hero h1 span { position: relative; display: inline-block; z-index: 0; }
-.hero h1 span::after { content: ""; position: absolute; left: -4px; right: -10px; bottom: 2px; height: .32em; background: var(--accent); z-index: -1; clip-path: polygon(0 18%, 62% 4%, 100% 0, 96% 38%, 100% 62%, 82% 66%, 100% 100%, 8% 96%, 0 78%, 3% 46%); }
-.hero p.sub { margin-top: 20px; font-size: 18px; max-width: 34em; }
-.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; min-height: 56px; padding: 8px 26px; border-radius: 6px; text-decoration: none; font-family: var(--font-display); font-weight: 700; border: 2px solid var(--fg); line-height: 1.3; cursor: pointer; font-size: 16px; }
-.btn small { font-family: var(--font-body); font-weight: 500; font-size: 12px; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.btn.ghost { background: transparent; color: var(--fg); }
-.ph { background: repeating-linear-gradient(135deg, var(--ph-a) 0 14px, var(--ph-b) 14px 28px); border: 1px solid var(--line); border-radius: 6px; display: flex; align-items: center; justify-content: center; text-align: center; color: var(--fg-soft); font-size: 13px; padding: 12px; width: 100%; }
-.hero .ph { aspect-ratio: 4 / 3; }
-@media (max-width: 800px) { .hero .wrap { grid-template-columns: 1fr; gap: 28px; } }
-
-.symptoms { background: var(--surface); border-block: 1px solid var(--line); }
-.sym-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 28px; margin-top: 28px; align-items: start; }
-.sym-list { display: flex; flex-direction: column; gap: 8px; }
-.sym-list button { text-align: left; font: inherit; font-weight: 500; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 14px 16px; cursor: pointer; display: flex; justify-content: space-between; gap: 12px; min-height: 52px; align-items: center; }
-.sym-list button[aria-pressed="true"] { background: var(--band); color: var(--band-fg); border-color: var(--band); }
-.sym-list button[aria-pressed="true"]::after { content: "\2192"; color: var(--accent); font-weight: 700; }
-.sym-panel { border: 1px solid var(--line); border-radius: 6px; padding: 24px; background: var(--bg); min-width: 0; }
-.sym-panel h3 { font-size: 20px; }
-.sym-panel p { margin-top: 12px; }
-.sym-panel .rec { margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--line); font-weight: 700; }
-@media (max-width: 800px) { .sym-grid { grid-template-columns: 1fr; } }
-
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
-.cards article { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 24px; min-width: 0; }
-.cards h3 { font-size: 19px; }
-.cards p { margin-top: 10px; color: var(--fg-soft); font-size: 15px; }
-@media (max-width: 800px) { .cards { grid-template-columns: 1fr; } }
-
-.works { background: var(--surface); border-block: 1px solid var(--line); }
-.work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
-.work-grid figure { margin: 0; min-width: 0; }
-.work-grid .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-.work-grid .ph { aspect-ratio: 1 / 1; font-size: 12px; }
-.work-grid figcaption { margin-top: 10px; font-size: 14px; color: var(--fg-soft); }
-@media (max-width: 800px) { .work-grid { grid-template-columns: 1fr; } }
-
-.flow { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; counter-reset: s; }
-.flow li { counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 16px; min-width: 0; }
-.flow li::before { content: "STEP " counter(s); font-family: var(--font-label); font-weight: 700; letter-spacing: .12em; color: var(--accent); display: block; font-size: 14px; }
-.flow b { display: block; font-family: var(--font-display); margin-top: 2px; }
-.flow span { display: block; margin-top: 6px; font-size: 14px; color: var(--fg-soft); line-height: 1.6; }
-@media (max-width: 900px) { .flow { grid-template-columns: 1fr; } }
-
-.price-wrap { overflow-x: auto; margin-top: 28px; }
-table { border-collapse: collapse; width: 100%; min-width: 480px; background: var(--surface); }
-th, td { border: 1px solid var(--line); padding: 14px 16px; text-align: left; vertical-align: top; }
-th { background: var(--bg); font-family: var(--font-display); font-weight: 700; font-size: 15px; white-space: nowrap; }
-td.num { font-family: var(--font-display); font-weight: 700; white-space: nowrap; }
-.note { margin-top: 14px; font-size: 14px; color: var(--fg-soft); }
-
-.owner .wrap { display: grid; grid-template-columns: 260px 1fr; gap: 36px; align-items: center; }
-.owner .ph { aspect-ratio: 1 / 1; }
-.owner h2 { margin-bottom: 14px; }
-.owner p + p { margin-top: 12px; }
-@media (max-width: 700px) { .owner .wrap { grid-template-columns: 1fr; } .owner .ph { max-width: 260px; } }
-
-.company { background: var(--surface); border-top: 1px solid var(--line); }
-dl.co { margin: 28px 0 0; display: grid; grid-template-columns: 9em 1fr; border-top: 1px solid var(--line); }
-dl.co dt, dl.co dd { margin: 0; padding: 14px 4px; border-bottom: 1px solid var(--line); min-width: 0; }
-dl.co dt { font-weight: 700; color: var(--fg-soft); }
-@media (max-width: 520px) { dl.co { grid-template-columns: 1fr; } dl.co dt { border-bottom: 0; padding-bottom: 0; } }
-
-.contact { background: var(--band); color: var(--band-fg); }
-.contact .label { color: #B9C4D8; }
-.contact .lead { color: #D2DAE8; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; margin-top: 28px; align-items: start; }
-.big-tel { font-family: var(--font-label); font-weight: 700; font-size: clamp(40px, 9vw, 56px); letter-spacing: .04em; line-height: 1.1; display: block; margin-top: 8px; user-select: all; }
-.contact form { background: var(--surface); color: var(--fg); border-radius: 6px; padding: 24px; display: grid; gap: 16px; min-width: 0; }
-.contact label { display: grid; gap: 6px; font-weight: 700; font-size: 14px; }
-.contact input, .contact select, .contact textarea { font: inherit; font-weight: 400; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 12px; width: 100%; min-height: 48px; }
-.contact textarea { min-height: 110px; resize: vertical; }
-#form-msg { min-height: 1.6em; font-size: 14px; color: var(--fg-soft); }
-@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
-
-footer { background: var(--band); color: #B9C4D8; border-top: 1px solid #243556; font-size: 13px; }
-footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-block: 24px; }
-footer .logo { width: 150px; color: #FFFFFF; }
-
-.sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line); display: none; gap: 10px; padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
-.sticky .btn { flex: 1; min-height: 50px; padding: 6px 12px; }
-@media (max-width: 720px) { .sticky { display: flex; } }
-@media (min-width: 721px) { body { padding-bottom: 0; } }
-@media (prefers-reduced-motion: no-preference) { .btn { transition: transform .15s ease; } .btn:hover { transform: translateY(-1px); } }
-
-.ba { position: relative; aspect-ratio: 4 / 3; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); cursor: ew-resize; touch-action: pan-y; user-select: none; -webkit-user-select: none; --p: 62%; background: var(--ph-a); max-width: 100%; }
-.ba svg.scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.ba .after { clip-path: inset(0 calc(100% - var(--p)) 0 0); }
-.ba-handle { position: absolute; top: 0; bottom: 0; left: var(--p); width: 4px; margin-left: -2px; background: #FFFFFF; }
-.ba-knob { position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); border: 3px solid #FFFFFF; display: grid; place-items: center; font-weight: 700; font-size: 16px; letter-spacing: -2px; }
-.ba-tag { position: absolute; top: 10px; padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: 700; background: #14284B; color: #FFFFFF; }
-.ba-tag.l { left: 10px; }
-.ba-tag.r { right: 10px; }
-.ba-cap { margin-top: 10px; font-size: 13px; color: var(--fg-soft); }
-.s-before { --sky: #D5D9E0; --ground: #A7AD9E; --wall: #CBC4B7; --roof: #7B6055; --door: #8B7A6A; --glass: #9FA8B3; --trim: #B5AE9F; --wear: 1; }
-.s-after { --sky: #CFE4F6; --ground: #8FB58F; --wall: #E6EDF6; --roof: #14284B; --door: #F28C28; --glass: #BBD8F0; --trim: #FFFFFF; --wear: 0; }
-
-@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
-@keyframes brush { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-@keyframes swapin { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: no-preference) {
-  .hero .label, .hero h1, .hero p.sub, .hero .cta-row { animation: rise .7s cubic-bezier(.2, .7, .2, 1) both; }
-  .hero h1 { animation-delay: .1s; }
-  .hero p.sub { animation-delay: .25s; }
-  .hero .cta-row { animation-delay: .4s; }
-  .hero h1 span::after { transform-origin: left center; animation: brush .8s .9s cubic-bezier(.3, .7, .2, 1) both; }
-  .sym-panel.swap { animation: swapin .35s ease both; }
-  .reveal { opacity: .35; transform: translateY(16px); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .7, .2, 1); }
-  .reveal.in { opacity: 1; transform: none; }
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "塗り替えの時期は、どう判断すればいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "目安は、前回の塗装から10年前後といわれますが、立地や塗料、建物の向きで傷み方は変わります。壁を触ると白い粉がつく、ひびがある、色あせが目立つなどの症状が出ていれば、点検の時期です。年数だけでなく、実際の状態を見て判断します。"}}, {"@type": "Question", "name": "見積りだけでも頼めますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、大丈夫です。現地調査とお見積りは無料です。他社の見積書と見比べるためのご相談だけでも、お受けします。"}}, {"@type": "Question", "name": "工事中も、家で生活できますか？", "acceptedAnswer": {"@type": "Answer", "text": "できます。ただし、足場と養生シートで窓が開けにくい期間や、洗濯物を外に干せない期間があります。工事の前に、日程と、生活で気をつけていただく点をご説明します。"}}, {"@type": "Question", "name": "雨の日は、どうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "雨の日や、湿度が高い日、気温が低い日は、塗料が正しく乾かないため、塗装を見合わせます。一般に、気温5℃以下、湿度85%以上は、塗装に向かないとされています。天候によって、工期が延びる場合があります。"}}, {"@type": "Question", "name": "工事期間は、どのくらいですか？", "acceptedAnswer": {"@type": "Answer", "text": "一般的な戸建てで、1〜2週間ほどが目安です。建物の大きさ、工事の範囲、天候で変わります。"}}, {"@type": "Question", "name": "においは気になりますか？", "acceptedAnswer": {"@type": "Answer", "text": "水性塗料は、においが少なめです。溶剤系の塗料は、においが出る場合があります。使う塗料と、においが出る時期は、事前にお伝えします。窓を開けておきたい時間帯があれば、ご相談ください。"}}, {"@type": "Question", "name": "近隣への配慮は、どうしますか？", "acceptedAnswer": {"@type": "Answer", "text": "足場の組み立て時の音、高圧洗浄の水はね、塗料のにおいなどで、近隣に影響が出る場合があります。着工前に、近隣へのごあいさつをしておくと安心です。ご希望があれば、ご相談ください。"}}, {"@type": "Question", "name": "相談の前に、準備するものはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "なくても大丈夫です。あれば、建物の築年数が分かるもの、前回の工事の記録、気になる箇所の写真があると、話が早く進みます。"}}]}</script>
+</head>
+<body>
 <div class="draft">確認用のたたき台です。電話番号・写真・料金・文面はすべて仮の内容です。</div>
 
 <header class="top">
@@ -186,9 +33,9 @@ footer .logo { width: 150px; color: #FFFFFF; }
   <section class="hero">
     <div class="wrap">
       <div>
-        <span class="label">Maebashi painting</span>
-        <h1>前橋の家を、<br><span>塗り替える。</span></h1>
-        <p class="sub">外壁・屋根・内装の塗装を、前橋市とその周辺で承っています。現地調査とお見積りは無料です。</p>
+        <span class="label">Maebashi / Gunma painting</span>
+        <h1>群馬の家を、<br><span>塗り替える。</span></h1>
+        <p class="sub">前橋市を拠点に、群馬県内の外壁・屋根・内装の塗装を承っています。現地調査とお見積りは無料です。</p>
         <div class="cta-row">
           <a class="btn primary" href="tel:0270000000">電話で相談する<small>027-000-0000（受付時間は仮）</small></a>
           <a class="btn ghost" href="#contact">無料見積フォームへ<small>写真を送るだけでもOK</small></a>
@@ -277,6 +124,159 @@ footer .logo { width: 150px; color: #FFFFFF; }
     </div>
   </section>
 
+  <section class="works" id="process">
+    <div class="wrap">
+      <span class="label">Process</span>
+      <h2>仕上がりを決めるのは、塗る前の工程です</h2>
+      <p class="lead">外壁塗装は、塗料を塗る作業より、その前の準備に時間をかけます。完成すると見えなくなる工程を、順に説明します。工程を選ぶと、壁の断面がどう変わるかが分かります。</p>
+      <div class="proc-grid">
+        <div class="sym-list" id="proc-list" role="group" aria-label="工程を選ぶ">
+          <button type="button" aria-pressed="true" data-i="0">1　足場・養生</button>
+          <button type="button" aria-pressed="false" data-i="1">2　高圧洗浄</button>
+          <button type="button" aria-pressed="false" data-i="2">3　下地補修</button>
+          <button type="button" aria-pressed="false" data-i="3">4　下塗り</button>
+          <button type="button" aria-pressed="false" data-i="4">5　中塗り</button>
+          <button type="button" aria-pressed="false" data-i="5">6　上塗り</button>
+          <button type="button" aria-pressed="false" data-i="6">7　完了確認</button>
+        </div>
+        <div class="proc-panel" aria-live="polite">
+          <svg id="proc-svg" viewBox="0 0 320 200" role="img" aria-label="壁と塗膜を横から見た断面図。選んだ工程に合わせて層が増えます。">
+            <rect x="20" y="120" width="280" height="70" fill="#B9B2A6"/>
+            <text x="28" y="182" font-size="12" fill="#4A4540" style="font-family:var(--font-body)">壁（下地）</text>
+            <path class="lay" id="L-crack" d="M150 120 L146 134 L154 146 L148 160 L152 172" stroke="#3F3A35" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <rect class="lay" id="L-patch" x="138" y="120" width="24" height="56" rx="2" fill="#D3CCBF"/>
+            <g class="lay" id="L-dirt"><rect x="20" y="111" width="280" height="9" fill="#7C6446" opacity=".8"/><circle cx="60" cy="109" r="5" fill="#5F7A4A"/><circle cx="96" cy="108" r="4" fill="#5F7A4A"/><circle cx="214" cy="109" r="5" fill="#5F7A4A"/><circle cx="262" cy="108" r="4" fill="#5F7A4A"/><text x="28" y="104" font-size="12" fill="#6B5636" style="font-family:var(--font-body)">汚れ・コケ・古い塗膜の粉</text></g>
+            <g class="lay" id="L-under"><rect x="20" y="98" width="280" height="22" fill="#F2F4F7" stroke="#C5CCD6"/><text x="28" y="113" font-size="12" fill="#14284B" style="font-family:var(--font-body)">下塗り（接着と吸い込み止め）</text></g>
+            <g class="lay" id="L-mid"><rect x="20" y="76" width="280" height="22" fill="#8FAAD0"/><text x="28" y="91" font-size="12" fill="#0F1F3A" style="font-family:var(--font-body)">中塗り（厚みと色むら防止）</text></g>
+            <g class="lay" id="L-top"><rect x="20" y="54" width="280" height="22" fill="#14284B"/><text x="28" y="69" font-size="12" fill="#FFFFFF" style="font-family:var(--font-body)">上塗り（仕上げ）</text></g>
+            <g class="lay" id="L-prot" stroke="#4A5875" stroke-width="2" fill="none" stroke-linecap="round"><path d="M190 14 L190 40 M184 34 L190 41 L196 34"/><path d="M226 14 L226 40 M220 34 L226 41 L232 34"/><path d="M262 14 L262 40 M256 34 L262 41 L268 34"/></g>
+            <text class="lay" id="L-protT" x="28" y="30" font-size="12" fill="#4A5875" style="font-family:var(--font-body)">紫外線・雨から壁を守る</text>
+            <g class="lay" id="L-ok"><circle cx="292" cy="30" r="14" fill="#3E8E5E"/><path d="M285 30 L290 36 L300 24" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+          </svg>
+          <h3 id="proc-h"></h3>
+          <p id="proc-p"></p>
+          <p class="rec" id="proc-w"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paint">
+    <div class="wrap">
+      <span class="label">Paint</span>
+      <h2>塗料は、種類で価格も持ちも変わります</h2>
+      <p class="lead">戸建ての外壁に使われる、主な塗料の種類です。価格と耐久性は、種類ごとの相対的な目安です。</p>
+      <div class="price-wrap">
+        <table class="paint-table">
+          <thead><tr><th>種類</th><th>価格</th><th>耐久性</th><th>特徴と、向いているケース</th></tr></thead>
+          <tbody>
+            <tr><td class="num">アクリル系</td><td>低め</td><td>短め</td><td>価格を抑えられます。耐久性は短めなので、短い周期での塗り替えや、将来建て替える予定の建物に向きます。</td></tr>
+            <tr><td class="num">ウレタン系</td><td>低め〜ふつう</td><td>短め〜ふつう</td><td>密着性が高く、柔軟性があります。雨どいや軒天など、細かい付帯部に使われることが多い塗料です。</td></tr>
+            <tr><td class="num">シリコン系</td><td>ふつう</td><td>ふつう</td><td>価格と耐久性のバランスがよく、戸建ての外壁で広く使われています。迷ったときの基準になる塗料です。</td></tr>
+            <tr><td class="num">フッ素系</td><td>高め</td><td>長め</td><td>耐久性が高く、塗り替えの回数を減らしたい場合に向きます。足場を組む回数が減るため、長い目で見ると、費用を抑えられる場合があります。</td></tr>
+            <tr><td class="num">無機系</td><td>高め</td><td>長め</td><td>耐久性と汚れにくさに優れます。塗膜が硬い製品もあるため、下地の状態や製品の特性を見て選びます。</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="cards">
+        <article><h3>水性と溶剤系（油性）</h3><p>水性は、においが少なく、扱いやすい塗料です。溶剤系は、密着性に優れる一方で、においが強い場合があります。使い分けは、塗る場所と素材で決めます。</p></article>
+        <article><h3>遮熱塗料</h3><p>日射を反射して、屋根や外壁の表面温度の上昇を抑える機能をもつ塗料です。屋根に使われることが多く、夏の暑さが気になるお住まいで検討されます。</p></article>
+        <article><h3>耐用年数の考え方</h3><p>耐用年数は、塗料のグレード、日当たりや風雨といった立地、下地の状態で変わります。カタログの数字は、保証ではなく、目安として見てください。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="works" id="color">
+    <div class="wrap">
+      <span class="label">Color</span>
+      <h2>色選びで、後悔しないために</h2>
+      <p class="lead">外壁の色は、あとから簡単には変えられません。色を選んで、家の見え方を試してみてください。</p>
+      <div class="sim-grid">
+        <div class="sim-stage">
+          <svg id="sim" class="s-after" viewBox="0 0 400 300" style="--wall:#EFE6D2;--roof:#14284B;--door:#F28C28" role="img" aria-label="選んだ色を反映した家のイメージ図"><use href="#house"/></svg>
+        </div>
+        <div class="sim-ctl">
+          <div class="sim-group">
+            <p class="sim-label">外壁の色：<b id="n-wall">アイボリー</b></p>
+            <div class="chips" data-var="wall" role="group" aria-label="外壁の色">
+              <button type="button" class="chip" aria-pressed="true" data-c="#EFE6D2" data-n="アイボリー"><i style="background:#EFE6D2"></i>アイボリー</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#D9DDE3" data-n="ライトグレー"><i style="background:#D9DDE3"></i>ライトグレー</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#D8C3A0" data-n="ベージュ"><i style="background:#D8C3A0"></i>ベージュ</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#AFC1D3" data-n="ブルーグレー"><i style="background:#AFC1D3"></i>ブルーグレー</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#B7C4B0" data-n="グリーングレー"><i style="background:#B7C4B0"></i>グリーングレー</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#7A8088" data-n="ダークグレー"><i style="background:#7A8088"></i>ダークグレー</button>
+            </div>
+          </div>
+          <div class="sim-group">
+            <p class="sim-label">屋根の色：<b id="n-roof">紺</b></p>
+            <div class="chips" data-var="roof" role="group" aria-label="屋根の色">
+              <button type="button" class="chip" aria-pressed="true" data-c="#14284B" data-n="紺"><i style="background:#14284B"></i>紺</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#3E4349" data-n="チャコール"><i style="background:#3E4349"></i>チャコール</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#5B3F33" data-n="ブラウン"><i style="background:#5B3F33"></i>ブラウン</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#8C4A3A" data-n="赤茶"><i style="background:#8C4A3A"></i>赤茶</button>
+            </div>
+          </div>
+          <div class="sim-group">
+            <p class="sim-label">玄関ドアの色：<b id="n-door">オレンジ</b></p>
+            <div class="chips" data-var="door" role="group" aria-label="玄関ドアの色">
+              <button type="button" class="chip" aria-pressed="true" data-c="#F28C28" data-n="オレンジ"><i style="background:#F28C28"></i>オレンジ</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#1F3A68" data-n="紺"><i style="background:#1F3A68"></i>紺</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#F5F5F5" data-n="白"><i style="background:#F5F5F5"></i>白</button>
+              <button type="button" class="chip" aria-pressed="false" data-c="#2E6B4F" data-n="深緑"><i style="background:#2E6B4F"></i>深緑</button>
+            </div>
+          </div>
+          <p class="note">画面で見える色は、実際の塗料の色とは異なります。ご検討の際は、実物の色見本で確認してください。ベージュやグレーなどの中間の色は、汚れや色あせが目立ちにくい傾向があります。</p>
+        </div>
+      </div>
+      <div class="cards">
+        <article><h3>見本は大きく、実際の壁で</h3><p>小さな色見本で選ぶと、実際の外壁に塗ったとき、明るく鮮やかに見えやすくなります。これを面積効果といいます。A4サイズ以上の見本を壁に当てて確認してください。</p></article>
+        <article><h3>時間と場所を変えて見る</h3><p>同じ色でも、日なた、日陰、朝、夕方で見え方が変わります。晴れの日と曇りの日の両方で確認すると安心です。</p></article>
+        <article><h3>3色でまとめる</h3><p>外壁（ベース）、屋根やサッシ（サブ）、玄関ドアや付帯部（アクセント）の3色に絞ると、まとまりが出ます。割合の目安は、ベースが約7割、サブが約2〜3割、アクセントが約1割です。</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="estimate">
+    <div class="wrap">
+      <span class="label">Estimate</span>
+      <h2>見積書は、ここを見てください</h2>
+      <p class="lead">複数の会社の見積書を比べるときの、見るポイントです。金額の安さだけでなく、何が含まれているかを確認します。</p>
+      <div class="est-grid">
+        <div class="price-wrap">
+          <table class="est">
+            <caption>見積書の例（金額は省略）</caption>
+            <thead><tr><th>項目<span class="mk">1</span></th><th>数量<span class="mk">2</span></th><th>単位</th><th>単価</th><th>金額</th></tr></thead>
+            <tbody>
+              <tr><td>仮設足場<span class="mk">4</span></td><td>○○</td><td>㎡</td><td>○○</td><td>○○</td></tr>
+              <tr><td>養生・飛散防止シート</td><td>○○</td><td>㎡</td><td>○○</td><td>○○</td></tr>
+              <tr><td>高圧洗浄<span class="mk">4</span></td><td>○○</td><td>㎡</td><td>○○</td><td>○○</td></tr>
+              <tr><td>下地補修（ひび割れ・サビ）<span class="mk">4</span></td><td>○○</td><td>箇所</td><td>○○</td><td>○○</td></tr>
+              <tr><td>シーリング打ち替え</td><td>○○</td><td>m</td><td>○○</td><td>○○</td></tr>
+              <tr><td>外壁 下塗り（メーカー名・商品名）<span class="mk">3</span></td><td>○○</td><td>㎡</td><td>○○</td><td>○○</td></tr>
+              <tr><td>外壁 中塗り（同上）<span class="mk">3</span></td><td>○○</td><td>㎡</td><td>○○</td><td>○○</td></tr>
+              <tr><td>外壁 上塗り（同上）<span class="mk">3</span></td><td>○○</td><td>㎡</td><td>○○</td><td>○○</td></tr>
+              <tr><td>付帯部塗装（雨どい・軒天など）</td><td>○○</td><td>m</td><td>○○</td><td>○○</td></tr>
+              <tr><td>諸経費</td><td>○○</td><td></td><td></td><td>○○</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <ol class="pts">
+            <li><span class="mk">1</span><div><b>項目が分かれているか</b><p>「外壁塗装　一式」のようにまとめられていると、何にいくらかかるのか分かりません。</p></div></li>
+            <li><span class="mk">2</span><div><b>数量と単価が書かれているか</b><p>塗る面積（㎡）と単価が分かれていれば、他社の見積書と比べられます。</p></div></li>
+            <li><span class="mk">3</span><div><b>塗料のメーカー名、商品名、塗り回数</b><p>どの塗料を、何回塗るのかが書かれているかを確認してください。</p></div></li>
+            <li><span class="mk">4</span><div><b>足場、洗浄、補修が含まれているか</b><p>安い見積書は、これらの工程が省かれている場合があります。</p></div></li>
+            <li><span class="mk">5</span><div><b>保証の内容と期間</b><p>何が、何年、保証されるのかを、書面で確認してください。</p></div></li>
+          </ol>
+        </div>
+      </div>
+      <div class="warn">
+        <h3>こんなときは、一度立ち止まってください</h3>
+        <p>「今日契約すれば大幅に値引きする」と、契約を急がされる。内訳がなく、「一式」ばかりが並んでいる。塗料のメーカー名や商品名が書かれていない。相場より極端に安い。必要な工程が省かれている可能性があります。その場で決めず、見積書を持ち帰って、比べてください。</p>
+      </div>
+    </div>
+  </section>
+
   <section class="works" id="flow">
     <div class="wrap">
       <span class="label">Flow</span>
@@ -309,6 +309,23 @@ footer .logo { width: 150px; color: #FFFFFF; }
     </div>
   </section>
 
+  <section class="works" id="faq">
+    <div class="wrap">
+      <span class="label">FAQ</span>
+      <h2>よくあるご質問</h2>
+      <div class="faq-list">
+        <details class="faq"><summary>塗り替えの時期は、どう判断すればいいですか？</summary><p class="ans">目安は、前回の塗装から10年前後といわれますが、立地や塗料、建物の向きで傷み方は変わります。壁を触ると白い粉がつく、ひびがある、色あせが目立つなどの症状が出ていれば、点検の時期です。年数だけでなく、実際の状態を見て判断します。</p></details>
+        <details class="faq"><summary>見積りだけでも頼めますか？</summary><p class="ans">はい、大丈夫です。現地調査とお見積りは無料です。他社の見積書と見比べるためのご相談だけでも、お受けします。</p></details>
+        <details class="faq"><summary>工事中も、家で生活できますか？</summary><p class="ans">できます。ただし、足場と養生シートで窓が開けにくい期間や、洗濯物を外に干せない期間があります。工事の前に、日程と、生活で気をつけていただく点をご説明します。</p></details>
+        <details class="faq"><summary>雨の日は、どうなりますか？</summary><p class="ans">雨の日や、湿度が高い日、気温が低い日は、塗料が正しく乾かないため、塗装を見合わせます。一般に、気温5℃以下、湿度85%以上は、塗装に向かないとされています。天候によって、工期が延びる場合があります。</p></details>
+        <details class="faq"><summary>工事期間は、どのくらいですか？</summary><p class="ans">一般的な戸建てで、1〜2週間ほどが目安です。建物の大きさ、工事の範囲、天候で変わります。</p></details>
+        <details class="faq"><summary>においは気になりますか？</summary><p class="ans">水性塗料は、においが少なめです。溶剤系の塗料は、においが出る場合があります。使う塗料と、においが出る時期は、事前にお伝えします。窓を開けておきたい時間帯があれば、ご相談ください。</p></details>
+        <details class="faq"><summary>近隣への配慮は、どうしますか？</summary><p class="ans">足場の組み立て時の音、高圧洗浄の水はね、塗料のにおいなどで、近隣に影響が出る場合があります。着工前に、近隣へのごあいさつをしておくと安心です。ご希望があれば、ご相談ください。</p></details>
+        <details class="faq"><summary>相談の前に、準備するものはありますか？</summary><p class="ans">なくても大丈夫です。あれば、建物の築年数が分かるもの、前回の工事の記録、気になる箇所の写真があると、話が早く進みます。</p></details>
+      </div>
+    </div>
+  </section>
+
   <section class="owner company" id="owner">
     <div class="wrap">
       <div class="ph" role="img" aria-label="代表の写真の差し替え枠">代表の写真<br>（差し替え）</div>
@@ -329,7 +346,7 @@ footer .logo { width: 150px; color: #FFFFFF; }
         <dt>屋号</dt><dd>スキップ（SKIP）</dd>
         <dt>代表</dt><dd>細谷（フルネームは要確認）</dd>
         <dt>所在地</dt><dd>群馬県前橋市（番地は要確認）</dd>
-        <dt>対応エリア</dt><dd>前橋市とその周辺（範囲は要確認）</dd>
+        <dt>対応エリア</dt><dd>前橋市を拠点に、群馬県内（範囲は要確認）</dd>
         <dt>電話</dt><dd>027-000-0000（仮）</dd>
         <dt>営業時間</dt><dd>○:00〜○:00（仮）</dd>
       </dl>
@@ -374,91 +391,6 @@ footer .logo { width: 150px; color: #FFFFFF; }
   <a class="btn ghost" href="#contact">無料見積</a>
 </div>
 
-<script>
-(function () {
-  var data = [
-    { h: "チョーキング（白い粉）", p: "塗膜の表面が劣化して、顔料が粉になって出てくる状態です。防水の働きが弱まり始めているサインです。", r: "目安：塗り替えを考え始める時期です。" },
-    { h: "外壁のひび", p: "髪の毛ほどの細いひびと、幅の広いひびでは対応が変わります。ひびから雨水が入ると、下地を傷めます。", r: "目安：早めの現地調査をおすすめします。" },
-    { h: "色あせ・汚れ", p: "紫外線や雨で塗膜が傷むと、色が褪せて汚れも付きやすくなります。見た目の問題で済むうちに手を入れられます。", r: "目安：色を変える相談にも向いている時期です。" },
-    { h: "屋根のサビ・苔", p: "金属屋根はサビ、スレート屋根は苔やひびが傷みの目印です。屋根は自分で見えにくいので、点検で状態を確認します。", r: "目安：サビが広がる前の点検が安心です。" },
-    { h: "雨漏りの心配", p: "天井のシミや、壁紙の浮きがあれば、塗装だけで足りない場合があります。まず原因を調べます。", r: "目安：できるだけ早くご連絡ください。" }
-  ];
-  var btns = document.querySelectorAll("#sym-list button");
-  var h = document.getElementById("sym-h"), p = document.getElementById("sym-p"), r = document.getElementById("sym-r");
-  function show(i) {
-    h.textContent = data[i].h; p.textContent = data[i].p; r.textContent = data[i].r;
-    var panel = document.getElementById("sym-panel");
-    panel.classList.remove("swap"); void panel.offsetWidth; panel.classList.add("swap");
-    btns.forEach(function (b, k) { b.setAttribute("aria-pressed", k === i ? "true" : "false"); });
-  }
-  btns.forEach(function (b) { b.addEventListener("click", function () { show(Number(b.dataset.i)); }); });
-  show(0);
-
-  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  var ba = document.getElementById("ba");
-  var touched = false, raf = 0;
-  function setP(v) {
-    v = Math.max(0, Math.min(100, v));
-    ba.style.setProperty("--p", v + "%");
-    ba.setAttribute("aria-valuenow", String(Math.round(v)));
-  }
-  function fromEvent(e) {
-    var r = ba.getBoundingClientRect();
-    setP((e.clientX - r.left) / r.width * 100);
-  }
-  ba.addEventListener("pointerdown", function (e) {
-    touched = true; cancelAnimationFrame(raf);
-    try { ba.setPointerCapture(e.pointerId); } catch (x) {}
-    fromEvent(e);
-    ba.dataset.drag = "1";
-  });
-  ba.addEventListener("pointermove", function (e) { if (ba.dataset.drag === "1") fromEvent(e); });
-  function endDrag() { ba.dataset.drag = "0"; }
-  ba.addEventListener("pointerup", endDrag);
-  ba.addEventListener("pointercancel", endDrag);
-  ba.addEventListener("keydown", function (e) {
-    var cur = Number(ba.getAttribute("aria-valuenow"));
-    if (e.key === "ArrowLeft") { touched = true; setP(cur - 5); e.preventDefault(); }
-    if (e.key === "ArrowRight") { touched = true; setP(cur + 5); e.preventDefault(); }
-  });
-  if (!reduce) {
-    setP(0);
-    var t0 = 0, dur = 2800, to = 62;
-    setTimeout(function () {
-      function step(ts) {
-        if (touched) return;
-        if (!t0) t0 = ts;
-        var k = Math.min(1, (ts - t0) / dur);
-        var e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
-        setP(to * e);
-        if (k < 1) raf = requestAnimationFrame(step);
-      }
-      raf = requestAnimationFrame(step);
-    }, 500);
-  }
-
-  if (!reduce && "IntersectionObserver" in window) {
-    document.documentElement.classList.add("js");
-    var targets = document.querySelectorAll("section h2, .cards article, .flow li, .work-grid figure, .price-wrap, dl.co, .sym-grid, .owner .wrap > *, .contact-grid > *");
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
-    }, { threshold: 0.12 });
-    targets.forEach(function (el) {
-      var idx = Array.prototype.indexOf.call(el.parentNode.children, el);
-      el.style.transitionDelay = (idx % 5) * 80 + "ms";
-      el.classList.add("reveal");
-      io.observe(el);
-    });
-  }
-
-  document.getElementById("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var name = document.getElementById("f-name").value.trim();
-    var tel = document.getElementById("f-tel").value.trim();
-    var msg = document.getElementById("form-msg");
-    if (!name || !tel) { msg.textContent = "お名前とお電話番号を入力してください。"; return; }
-    msg.textContent = "確認用のたたき台のため、まだ送信されません。公開時に送信先を設定します。";
-  });
-})();
-</script>
+<script src="app.js" defer></script>
+</body>
+</html>
