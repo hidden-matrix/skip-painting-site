@@ -25,6 +25,7 @@
     v = Math.max(0, Math.min(100, v));
     ba.style.setProperty("--p", v + "%");
     ba.setAttribute("aria-valuenow", String(Math.round(v)));
+    ba.setAttribute("aria-valuetext", "左から" + Math.round(v) + "パーセントが塗った後");
   }
   function fromEvent(e) {
     var r = ba.getBoundingClientRect();
@@ -116,10 +117,23 @@
 
   document.getElementById("form").addEventListener("submit", function (e) {
     e.preventDefault();
-    var name = document.getElementById("f-name").value.trim();
-    var tel = document.getElementById("f-tel").value.trim();
+    var nameEl = document.getElementById("f-name"), telEl = document.getElementById("f-tel"), agreeEl = document.getElementById("f-agree");
     var msg = document.getElementById("form-msg");
-    if (!name || !tel) { msg.textContent = "お名前とお電話番号を入力してください。"; return; }
-    msg.textContent = "確認用のたたき台のため、まだ送信されません。公開時に送信先を設定します。";
+    var digits = telEl.value.replace(/[^0-9]/g, "");
+    var bad = [];
+    var okName = nameEl.value.trim() !== "";
+    var okTel = digits.length >= 10 && digits.length <= 11;
+    nameEl.setAttribute("aria-invalid", okName ? "false" : "true");
+    telEl.setAttribute("aria-invalid", okTel ? "false" : "true");
+    if (!okName) bad.push("お名前を入力してください。");
+    if (!okTel) bad.push("お電話番号は、10〜11桁の数字で入力してください。");
+    if (!agreeEl.checked) bad.push("個人情報の利用目的への同意にチェックを入れてください。");
+    if (bad.length) {
+      msg.style.color = ""; msg.textContent = bad.join(" ");
+      (!okName ? nameEl : !okTel ? telEl : agreeEl).focus();
+      return;
+    }
+    msg.style.color = "#14284B";
+    msg.textContent = "入力内容に問題はありません。確認用のたたき台のため、まだ送信されません。公開時に送信先を設定します。";
   });
 })();
